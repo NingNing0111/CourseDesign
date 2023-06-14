@@ -11,7 +11,7 @@
  Target Server Version : 80030
  File Encoding         : 65001
 
- Date: 11/06/2023 23:18:00
+ Date: 14/06/2023 17:58:25
 */
 
 SET NAMES utf8mb4;
@@ -107,6 +107,7 @@ INSERT INTO `currentuser` VALUES (45, 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMDQzMzkz
 INSERT INTO `currentuser` VALUES (45, 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMDQzMzkzMzY0QHFxLmNvbSIsImV4cCI6MTY4NzE0MTI0OTc0NiwiaWF0IjoxNjg2Mjc3MjQ5NzQ2fQ.1GqZXGqTZ66huAr43PLRt9qb3T16cmEWrzm7Nt75hvU');
 INSERT INTO `currentuser` VALUES (51, 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0IiwiZXhwIjoxNjg3MTQ2MzI2ODk3LCJpYXQiOjE2ODYyODIzMjY4OTd9.auNM6bA8vsddN4gGQhpHK6l8cXAOoBXuzZRE2Alpu-I');
 INSERT INTO `currentuser` VALUES (45, 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMDQzMzkzMzY0QHFxLmNvbSIsImV4cCI6MTY4NzE2NjU0OTg0MSwiaWF0IjoxNjg2MzAyNTQ5ODQxfQ.IAQbH8cWicncHS-01B0WAoy8h4Qd331gyfOmyUbIsro');
+INSERT INTO `currentuser` VALUES (54, 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtbnpkbmFAMTYzLmNvbSIsImV4cCI6MTY4NzQyMTU0NjUwOSwiaWF0IjoxNjg2NTU3NTQ2NTA5fQ.cJe3IDWafuMXkxcmusZSwyPBhVUo-tH9OyVn1xVLna4');
 
 -- ----------------------------
 -- Table structure for goods
@@ -122,13 +123,13 @@ CREATE TABLE `goods`  (
   `gImage` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '商品图片URL地址',
   `gLevel` int(0) UNSIGNED NOT NULL DEFAULT 0 COMMENT '商品评价等级',
   PRIMARY KEY (`gId`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 85 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 89 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of goods
 -- ----------------------------
 INSERT INTO `goods` VALUES (2, '商品2', 192, '这是商品2的描述', 199.99, 2, 'https://img.alicdn.com/bao/uploaded/i4/2064892827/O1CN01CI3KNJ1WkoWcUFeBH_!!0-item_pic.jpg', 8);
-INSERT INTO `goods` VALUES (3, '商品3', 297, '这是商品3的描述', 299.99, 3, 'https://img.alicdn.com/bao/uploaded/O1CN01ls8mD21ZVeFYGT1K9_!!6000000003200-0-yinhe.jpg', 9);
+INSERT INTO `goods` VALUES (3, '商品3', 293, '这是商品3的描述', 299.99, 3, 'https://img.alicdn.com/bao/uploaded/O1CN01ls8mD21ZVeFYGT1K9_!!6000000003200-0-yinhe.jpg', 9);
 INSERT INTO `goods` VALUES (4, '商品4', 397, '这是商品4的描述', 399.99, 4, 'https://img.alicdn.com/bao/uploaded/i4/2211448736265/O1CN01yTjnmw1w9QCAmxfpS_!!0-item_pic.jpg', 10);
 INSERT INTO `goods` VALUES (5, '商品5', 100, '这是商品1的描述', 99.99, 1, 'https://img.alicdn.com/bao/uploaded/i1/692011888/O1CN01GNCKM01PokcQ7gXqx_!!692011888-0-picasso.jpg', 6);
 INSERT INTO `goods` VALUES (6, '商品6', 199, '这是商品2的描述', 199.99, 2, 'https://img.alicdn.com/bao/uploaded/i4/75566954/O1CN01vZ7FYi21Ez3vVf2p5_!!75566954.jpg', 8);
@@ -220,7 +221,7 @@ CREATE TABLE `order`  (
   `bId` int(0) NOT NULL COMMENT '购买该商品的用户ID',
   `gId` int(0) NOT NULL COMMENT '商品ID',
   PRIMARY KEY (`dId`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 327 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 348 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of order
@@ -319,7 +320,7 @@ INSERT INTO `order` VALUES (91, 1, '2022-12-21 00:00:00', 35.00, 60, 14, 41, 41)
 INSERT INTO `order` VALUES (92, 0, '2022-12-22 00:00:00', 35.00, 60, 14, 42, 42);
 INSERT INTO `order` VALUES (93, 1, '2022-12-23 00:00:00', 35.00, 70, 15, 43, 43);
 INSERT INTO `order` VALUES (94, 0, '2022-12-24 00:00:00', 35.00, 100, 15, 44, 44);
-INSERT INTO `order` VALUES (95, 0, '2022-12-25 00:00:00', 35.00, 100, 15, 45, 45);
+INSERT INTO `order` VALUES (95, 1, '2022-12-25 00:00:00', 35.00, 100, 15, 45, 45);
 INSERT INTO `order` VALUES (96, 0, '2022-12-26 00:00:00', 88.00, 100, 16, 46, 46);
 INSERT INTO `order` VALUES (97, 1, '2022-12-27 00:00:00', 88.00, 60, 16, 47, 47);
 INSERT INTO `order` VALUES (98, 0, '2022-12-28 00:00:00', 88.00, 80, 16, 48, 48);
@@ -569,6 +570,10 @@ INSERT INTO `order` VALUES (341, 0, '2023-06-11 23:05:04', 299.99, 1, 3, 54, 3);
 INSERT INTO `order` VALUES (342, 0, '2023-06-11 23:05:05', 399.99, 1, 4, 54, 4);
 INSERT INTO `order` VALUES (343, 0, '2023-06-11 23:05:08', 199.99, 1, 2, 54, 6);
 INSERT INTO `order` VALUES (344, 0, '2023-06-11 23:05:10', 299.99, 1, 3, 54, 7);
+INSERT INTO `order` VALUES (345, 1, '2023-06-12 09:38:07', 299.99, 1, 3, 45, 3);
+INSERT INTO `order` VALUES (346, 0, '2023-06-12 09:38:16', 299.99, 1, 3, 45, 3);
+INSERT INTO `order` VALUES (347, 0, '2023-06-12 15:44:15', 299.99, 1, 3, 54, 3);
+INSERT INTO `order` VALUES (348, 0, '2023-06-12 16:11:06', 299.99, 1, 3, 45, 3);
 
 -- ----------------------------
 -- Table structure for profit
@@ -756,6 +761,15 @@ INSERT INTO `profit` VALUES (323, 1.10);
 INSERT INTO `profit` VALUES (325, 1.10);
 INSERT INTO `profit` VALUES (327, 0.02);
 INSERT INTO `profit` VALUES (328, 2.00);
+INSERT INTO `profit` VALUES (330, 2.00);
+INSERT INTO `profit` VALUES (332, 2.00);
+INSERT INTO `profit` VALUES (333, 2.00);
+INSERT INTO `profit` VALUES (334, 2.00);
+INSERT INTO `profit` VALUES (335, 3.00);
+INSERT INTO `profit` VALUES (336, 3.00);
+INSERT INTO `profit` VALUES (337, 3.00);
+INSERT INTO `profit` VALUES (338, 4.00);
+INSERT INTO `profit` VALUES (339, 4.00);
 
 -- ----------------------------
 -- Table structure for user
@@ -771,7 +785,7 @@ CREATE TABLE `user`  (
   `uAddress` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '用户校园的地址',
   `uLevel` int(0) UNSIGNED NOT NULL DEFAULT 0 COMMENT '用户评价等级',
   PRIMARY KEY (`uId`, `uEmail`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 54 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 58 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user
@@ -816,13 +830,14 @@ INSERT INTO `user` VALUES (37, '48126730958', 'ZJszlhrL', 'ZJszlhrL@example.com'
 INSERT INTO `user` VALUES (38, '62358740119', '24gxsjta', '24gxsjta@example.com', 'vBw1KfDb', 1, '科技大H18栋168', 3);
 INSERT INTO `user` VALUES (39, '85012463957', 'hUPZEkzF', 'hUPZEkzF@example.com', 'R3odmHJf', 1, '科技大H18栋197', 1);
 INSERT INTO `user` VALUES (40, '60531847219', 'rPiwdg7j', 'rPiwdg7j@example.com', 'b0M9Jako', 0, '科技大H18栋538', 4);
-INSERT INTO `user` VALUES (42, '94701382650', '8eOMVAIu', '8eOMVAIu@example.com', 'zQtKme0s', 1, '科技大J20栋435', 2);
 INSERT INTO `user` VALUES (44, '94701382650', '8eOMVAIu', '8eOMVAIu@example.com', 'zQtKme0s', 1, '科技大J20栋435', 2);
 INSERT INTO `user` VALUES (45, '19873781066', 'NingNing0111', '2043393364@qq.com', '$2a$10$xGa9GX8QYqb0Bo.lTmxLiuNLmgeYG0F74ZgMdcAUVFQeXNmjqjuje', 0, '九公220', 1);
 INSERT INTO `user` VALUES (46, '94701382650', '8eOMVAIu', '8eOMVAIu@example.com', 'zQtKme0s', 1, '科技大J20栋435', 2);
 INSERT INTO `user` VALUES (52, '94701382650', '8eOMVAIu', '8eOMVAIu@example.com', 'zQtKme0s', 1, '科技大J20栋435', 2);
 INSERT INTO `user` VALUES (54, '19873781066', 'admin', 'mnzdna@163.com', '$2a$10$fZ5e7ZwDdBIQxmJYh9zwI.pUHCK64rFPKrxJAzHDSEjtgUfSQAxmO', 0, '九公220', 0);
 INSERT INTO `user` VALUES (55, '94701382650', '8eOMVAIu', '8eOMVAIu@example.com', 'zQtKme0s', 1, '科技大J20栋435', 2);
+INSERT INTO `user` VALUES (56, '94701382650', '8eOMVAIu', '8eOMVAIu@example.com', 'zQtKme0s', 1, '科技大J20栋435', 2);
+INSERT INTO `user` VALUES (57, '94701382650', '8eOMVAIu', '8eOMVAIu@example.com', 'zQtKme0s', 1, '科技大J20栋435', 2);
 
 -- ----------------------------
 -- Function structure for fun_init_profit
@@ -858,6 +873,23 @@ END
 delimiter ;
 
 -- ----------------------------
+-- Procedure structure for get_sLevel_by_uId
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `get_sLevel_by_uId`;
+delimiter ;;
+CREATE PROCEDURE `get_sLevel_by_uId`(IN `in_uId` int)
+BEGIN
+	select `goods`.uId,floor(avg(pSellerOfLevel)) as avgSellerLevel
+	from `comment`,`goods`
+	where `comment`.gId in (
+		select `goods`.gId
+		from `goods`
+		where `goods`.uId = `in_uId`) and `goods`.gId = `comment`.gId;
+END
+;;
+delimiter ;
+
+-- ----------------------------
 -- Procedure structure for get_user_by_token
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `get_user_by_token`;
@@ -867,6 +899,95 @@ BEGIN
 	  select `user`.*
 		from `user`,`currentuser`
 		where `user`.uId = `currentuser`.uId AND `currentuser`.token = `in_token`;
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Triggers structure for table comment
+-- ----------------------------
+DROP TRIGGER IF EXISTS `trg_update_goods_level`;
+delimiter ;;
+CREATE TRIGGER `trg_update_goods_level` AFTER INSERT ON `comment` FOR EACH ROW BEGIN 
+     UPDATE `goods` SET gLevel = FLOOR((
+		     SELECT AVG(pGoodsOfLevel) FROM `comment` 
+			      WHERE `comment`.gId = NEW.gId))
+     WHERE gId=NEW.gId;
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Triggers structure for table comment
+-- ----------------------------
+DROP TRIGGER IF EXISTS `trg_update_host_level`;
+delimiter ;;
+CREATE TRIGGER `trg_update_host_level` AFTER INSERT ON `comment` FOR EACH ROW BEGIN
+    UPDATE `user` SET uLevel = FLOOR((
+      SELECT AVG(pSellerOfLevel) FROM `comment` WHERE pId = NEW.pId))
+      WHERE uId = (
+      SELECT g.uId FROM `goods` g JOIN `comment` c WHERE g.gId=c.gId AND c.pId=NEW.pId);
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Triggers structure for table goods
+-- ----------------------------
+DROP TRIGGER IF EXISTS `trg_delete_comments`;
+delimiter ;;
+CREATE TRIGGER `trg_delete_comments` AFTER DELETE ON `goods` FOR EACH ROW begin
+  delete from `comment` where `comment`.gId = old.gId;
+	
+end
+;;
+delimiter ;
+
+-- ----------------------------
+-- Triggers structure for table order
+-- ----------------------------
+DROP TRIGGER IF EXISTS `trg_calc_profit1`;
+delimiter ;;
+CREATE TRIGGER `trg_calc_profit1` AFTER INSERT ON `order` FOR EACH ROW BEGIN
+     IF NEW.dStatue = 1 THEN
+          INSERT INTO profit (dId,profit) VALUES (NEW.dId,round(NEW.dAmount * 0.01,2));
+END IF;
+     
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Triggers structure for table order
+-- ----------------------------
+DROP TRIGGER IF EXISTS `trg_calc_profit2`;
+delimiter ;;
+CREATE TRIGGER `trg_calc_profit2` AFTER UPDATE ON `order` FOR EACH ROW BEGIN
+     IF NEW.dStatue = 1 AND OLD.dStatue = 0 THEN
+          INSERT INTO profit (dId,profit) VALUES (NEW.dId,round(NEW.dAmount * 0.01,2));
+END IF;
+     
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Triggers structure for table order
+-- ----------------------------
+DROP TRIGGER IF EXISTS `trg_check_inventory`;
+delimiter ;;
+CREATE TRIGGER `trg_check_inventory` BEFORE INSERT ON `order` FOR EACH ROW BEGIN
+    DECLARE vCount INT;
+    
+    SELECT gCount INTO vCount FROM `goods` WHERE gId = NEW.gId;
+    
+-- 订单的商品数量大于商品的库存量时，触发器会使用 SIGNAL 语句来返回 SQLSTATE '45000'，表示自定义的异常状态，同时设置 MESSAGE_TEXT 为 '商品库存不足'，表示异常信息
+		IF NEW.dCount > vCount THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = '商品库存不足';
+    ELSE
+        UPDATE `goods` SET gCount = vCount - NEW.dCount WHERE gId = NEW.gId;
+    END IF;
 END
 ;;
 delimiter ;

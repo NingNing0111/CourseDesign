@@ -9,14 +9,14 @@ spring:
     url: jdbc:mysql://localhost:3306/software-db
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: 2043393364
+    password: 数据库密码
     type: com.alibaba.druid.pool.DruidDataSource
   mvc:
     path match:
       matching-strategy: ant_path_matcher
 
 
-# Druid登录信息
+# Druid后台监控的登录信息
 loginAccount:
   username: admin
   password: admin
