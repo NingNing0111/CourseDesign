@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "application.yml",
+      "type": "com.ning.config.DruidConfig",
+      "sourceType": "com.ning.config.DruidConfig"
+    },
+    {
+      "name": "spring.datasource",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.ning.config.DruidConfig",
+      "sourceMethod": "druidDataSource()"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

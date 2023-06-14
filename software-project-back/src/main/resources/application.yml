@@ -1,0 +1,33 @@
+# Tomcat服务器端口
+server:
+  port: 8888
+#
+# Spring组件配置
+spring:
+  # 数据库配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/software-db
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 2043393364
+    type: com.alibaba.druid.pool.DruidDataSource
+  mvc:
+    path match:
+      matching-strategy: ant_path_matcher
+
+
+# Druid登录信息
+loginAccount:
+  username: admin
+  password: admin
+
+# Mybatis配置
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# Token生成
+token:
+  SECRET_KEY: nunusedgoodssystem
+  EXPIRATION_TIME: 864_000_000
+

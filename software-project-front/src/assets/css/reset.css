@@ -1,0 +1,22 @@
+h1,h2,h3,h4,ul,li,form,p,body{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif, '微软雅黑';
+}
+
+html,body{
+    height: 100%;
+}

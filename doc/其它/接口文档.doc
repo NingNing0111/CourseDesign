@@ -1,0 +1,5117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="application/msword; charset=utf-8"/>
+    <title>toWord</title>
+        <style type="text/css">
+        .bg {
+            font-size: 14.5px;
+            font-weight: bold;
+            color: #000;
+            background-color: #559e68;
+        }
+
+        table {
+            border-width: 1px;
+            border-style: solid;
+            border-color: black;
+            table-layout: fixed;
+        }
+
+        tr {
+            height: 32px;
+            font-size: 12px;
+        }
+
+        td {
+            padding-left: 10px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: black;
+            height: 32px;
+            overflow: hidden;
+            word-break: break-all;
+            word-wrap: break-word;
+            font-size: 14.5px;
+        }
+
+        .bg td {
+            font-size: 14.5px;
+        }
+
+        tr td {
+            font-size: 14.5px;
+        }
+
+        .specialHeight {
+            height: 40px;
+        }
+
+        .first_title {
+            height: 60px;
+            line-height: 60px;
+            margin: 0;
+            font-weight: bold;
+            font-size: 21px;
+        }
+
+        .second_title {
+            height: 40px;
+            line-height: 40px;
+            margin: 0;
+            font-size: 18.5px;
+        }
+
+        .doc_title {
+            font-size: 42.5px;
+            text-align: center;
+        }
+
+        .download_btn {
+            float: right;
+        }
+
+        body {
+            font-family: 思源黑体 Normal;
+        }
+    </style>
+</head>
+
+<body>
+<div style="width:1000px; margin: 0 auto">
+    <div>
+        <p class="doc_title">校园二手交易平台API（1.0.5）</p>
+        
+        <br>
+    </div>
+    <div style="margin-bottom:20px;">
+        <!--这个是类的说明-->
+        <h4 class="first_title">商品管理接口</h4>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">1）添加商品</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">添加商品</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">添加商品</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">添加一条商品记录</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/goods/add</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">post</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4">application/json</td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">application/json</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.GContent</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">2.GCount</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">3.GId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">4.GImage</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">5.GLevel</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">6.GName</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">7.GPrice</td>
+                        <td>number(double)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">8.UId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">9.goods</td>
+                        <td>object</td>
+                        <td>null</td>
+                        
+                        <td>N</td>
+                        <td>商品的实例对象，由前端传入对象的对应属性</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">10.token</td>
+                        <td>string</td>
+                        <td>query</td>
+                        <td>Y</td>
+                        
+                        <td>token</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>201</td>
+                    <td colspan="2">Created</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">GContent=string&amp;GCount=0&amp;GId=0&amp;GImage=string&amp;GLevel=0&amp;GName=string&amp;GPrice=null&amp;UId=0&amp;token=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">2）查询所有商品</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">查询所有商品</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">查询所有商品</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">查询所有商品信息</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/goods/all</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">get</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">application/json</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">3）删除商品</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">删除商品</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">删除商品</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">删除一条商品记录</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/goods/delete</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">post</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4">application/json</td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">application/json</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.GContent</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">2.GCount</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">3.GId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">4.GImage</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">5.GLevel</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">6.GName</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">7.GPrice</td>
+                        <td>number(double)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">8.UId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">9.token</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>token</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>201</td>
+                    <td colspan="2">Created</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">GContent=string&amp;GCount=0&amp;GId=0&amp;GImage=string&amp;GLevel=0&amp;GName=string&amp;GPrice=null&amp;UId=0&amp;token=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">4）删除商品</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">删除商品</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">删除商品</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">通过id数组 删除对应的商品</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/goods/deleteById</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">post</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4">application/json</td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">application/json</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.ids</td>
+                        <td>object</td>
+                        <td>null</td>
+                        
+                        <td>N</td>
+                        <td>商品ID数组</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">2.listId</td>
+                        <td>array</td>
+                        <td>query</td>
+                        <td>Y</td>
+                        
+                        <td>listId</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">3.token</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>token值</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>201</td>
+                    <td colspan="2">Created</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">listId=[{}]&amp;token=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">5）搜索商品</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">搜索商品</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">搜索商品</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">带分页进行商品模糊搜索</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/goods/search</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">get</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">application/json</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.GContent</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">2.GCount</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">3.GId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">4.GImage</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">5.GLevel</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">6.GName</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">7.GPrice</td>
+                        <td>number(double)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">8.UId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">9.goods</td>
+                        <td>object</td>
+                        <td>null</td>
+                        
+                        <td>N</td>
+                        <td>依据goods里的属性进行商品的模糊查询</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">10.limit</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>分页查询中每页显示的数量</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">11.page</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>分页查询中要查看第几页</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">GContent=string&amp;GCount=0&amp;GId=0&amp;GImage=string&amp;GLevel=0&amp;GName=string&amp;GPrice=null&amp;UId=0&amp;limit=string&amp;page=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">6）商品查询</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">商品查询</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">商品查询</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">依据prompt对商品进行商品名的模糊查询</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/goods/search/{prompt}</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">get</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">application/json</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.prompt</td>
+                        <td>string</td>
+                        <td>path</td>
+                        
+                        <td>N</td>
+                        <td>依据商品名进行模糊搜索的关键字</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">7）修改商品</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">修改商品</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">修改商品</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">修改商品信息</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/goods/update</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">post</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4">application/json</td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">application/json</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.GContent</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">2.GCount</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">3.GId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">4.GImage</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">5.GLevel</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">6.GName</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">7.GPrice</td>
+                        <td>number(double)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">8.UId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">9.goods</td>
+                        <td>object</td>
+                        <td>null</td>
+                        
+                        <td>N</td>
+                        <td>商品的实例对象，由前端传入对象的对应属性</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">10.token</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>token</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>201</td>
+                    <td colspan="2">Created</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">GContent=string&amp;GCount=0&amp;GId=0&amp;GImage=string&amp;GLevel=0&amp;GName=string&amp;GPrice=null&amp;UId=0&amp;token=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <div style="margin-bottom:20px;">
+        <!--这个是类的说明-->
+        <h4 class="first_title">用户管理操作的接口</h4>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">1）查询所有用户信息</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">查询所有用户信息</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">查询所有用户信息</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">依据token值进行查询</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/user/all</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">get</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">*/*</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.limit</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>limit</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">2.page</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>page</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">3.token</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>用户token</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">limit=0&amp;page=0&amp;token=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">2）delete</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">delete</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">delete</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">无</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/user/delete</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">post</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4">application/json</td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">*/*</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.UAddress</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">2.UEmail</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">3.UId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">4.UIsVerify</td>
+                        <td>boolean</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">5.ULevel</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">6.UNickname</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">7.UPassword</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">8.UPhone</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">9.token</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>token</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>201</td>
+                    <td colspan="2">Created</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">UAddress=string&amp;UEmail=string&amp;UId=0&amp;UIsVerify=true&amp;ULevel=0&amp;UNickname=string&amp;UPassword=string&amp;UPhone=string&amp;token=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">3）登录</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">登录</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">登录</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">通过传入邮箱和密码进行登录</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/user/login</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">post</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4">application/json</td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">*/*</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.email</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>用户登录时需要输入的邮箱</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">2.password</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>用户登录时需要输入的密码</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>201</td>
+                    <td colspan="2">Created</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">email=string&amp;password=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">4）退出登录</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">退出登录</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">退出登录</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">依据token值退出</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/user/loginout</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">post</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4">application/json</td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">*/*</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.token</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>用户登录后的唯一身份标识</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>201</td>
+                    <td colspan="2">Created</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">token=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">5）注册</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">注册</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">注册</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">传入相关的用户信息进行注册</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/user/register</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">post</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4">application/json</td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">*/*</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.UAddress</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">2.UEmail</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">3.UId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">4.UIsVerify</td>
+                        <td>boolean</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">5.ULevel</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">6.UNickname</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">7.UPassword</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">8.UPhone</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">9.user</td>
+                        <td>object</td>
+                        <td>null</td>
+                        
+                        <td>N</td>
+                        <td>一个用户对象，大部分属性都需要传入</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>201</td>
+                    <td colspan="2">Created</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">UAddress=string&amp;UEmail=string&amp;UId=0&amp;UIsVerify=true&amp;ULevel=0&amp;UNickname=string&amp;UPassword=string&amp;UPhone=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">6）queryUserInfo</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">queryUserInfo</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">queryUserInfo</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">无</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/user/tokenInfo</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">get</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">*/*</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.token</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>token</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">token=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <div style="margin-bottom:20px;">
+        <!--这个是类的说明-->
+        <h4 class="first_title">订单管理操作的相关接口</h4>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">1）增加一条订单记录</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">增加一条订单记录</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">增加一条订单记录</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">依据订单对象增加一条订单</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/order/add</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">post</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4">application/json</td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">*/*</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.BId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">2.DAmount</td>
+                        <td>number(double)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">3.DCount</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">4.DDate.date</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">5.DDate.day</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">6.DDate.hours</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">7.DDate.minutes</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">8.DDate.month</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">9.DDate.nanos</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">10.DDate.seconds</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">11.DDate.time</td>
+                        <td>integer(int64)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">12.DDate.timezoneOffset</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">13.DDate.year</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">14.DId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">15.DStatue</td>
+                        <td>boolean</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">16.GId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">17.SId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">18.order</td>
+                        <td>object</td>
+                        <td>null</td>
+                        
+                        <td>N</td>
+                        <td>订单对象</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">19.token</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>用户Token</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>201</td>
+                    <td colspan="2">Created</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">BId=0&amp;DAmount=null&amp;DCount=0&amp;DDate.date=0&amp;DDate.day=0&amp;DDate.hours=0&amp;DDate.minutes=0&amp;DDate.month=0&amp;DDate.nanos=0&amp;DDate.seconds=0&amp;DDate.time=0&amp;DDate.timezoneOffset=0&amp;DDate.year=0&amp;DId=0&amp;DStatue=true&amp;GId=0&amp;SId=0&amp;token=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">2）订单查询接口</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">订单查询接口</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">订单查询接口</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">无</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/order/all</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">get</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">*/*</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.BId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">2.DAmount</td>
+                        <td>number(double)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">3.DCount</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">4.DDate.date</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">5.DDate.day</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">6.DDate.hours</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">7.DDate.minutes</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">8.DDate.month</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">9.DDate.nanos</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">10.DDate.seconds</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">11.DDate.time</td>
+                        <td>integer(int64)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">12.DDate.timezoneOffset</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">13.DDate.year</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">14.DId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">15.DStatue</td>
+                        <td>boolean</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">16.GId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">17.SId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">18.limit</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>limit</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">19.page</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>page</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">20.token</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>用户Token值</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">BId=0&amp;DAmount=null&amp;DCount=0&amp;DDate.date=0&amp;DDate.day=0&amp;DDate.hours=0&amp;DDate.minutes=0&amp;DDate.month=0&amp;DDate.nanos=0&amp;DDate.seconds=0&amp;DDate.time=0&amp;DDate.timezoneOffset=0&amp;DDate.year=0&amp;DId=0&amp;DStatue=true&amp;GId=0&amp;SId=0&amp;limit=0&amp;page=0&amp;token=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">3）查询商品订单</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">查询商品订单</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">查询商品订单</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">无</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/order/allByGoods</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">get</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">*/*</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.GContent</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">2.GCount</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">3.GId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">4.GImage</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">5.GLevel</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">6.GName</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">7.GPrice</td>
+                        <td>number(double)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">8.UId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">9.goods</td>
+                        <td>object</td>
+                        <td>null</td>
+                        
+                        <td>N</td>
+                        <td>商品对象，可以只传gId</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">10.token</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>用户Token值</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">GContent=string&amp;GCount=0&amp;GId=0&amp;GImage=string&amp;GLevel=0&amp;GName=string&amp;GPrice=null&amp;UId=0&amp;token=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">4）查询用户对应的订单</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">查询用户对应的订单</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">查询用户对应的订单</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">无</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/order/allByUser</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">get</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">*/*</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.UAddress</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">2.UEmail</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">3.UId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">4.UIsVerify</td>
+                        <td>boolean</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">5.ULevel</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">6.UNickname</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">7.UPassword</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">8.UPhone</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">9.token</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>用户Token值</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">10.user</td>
+                        <td>object</td>
+                        <td>null</td>
+                        
+                        <td>N</td>
+                        <td>用户对象，可以只传uId</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">UAddress=string&amp;UEmail=string&amp;UId=0&amp;UIsVerify=true&amp;ULevel=0&amp;UNickname=string&amp;UPassword=string&amp;UPhone=string&amp;token=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">5）计算订单利润</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">计算订单利润</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">计算订单利润</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">计算后的订单利润会存入profit表里</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/order/profit</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">post</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4">application/json</td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">*/*</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.dId</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>订单ID号</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">2.token</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>用户Token值</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>201</td>
+                    <td colspan="2">Created</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">dId=string&amp;token=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">6）查询所有订单</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">查询所有订单</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">查询所有订单</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">无</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/order/profitAll</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">get</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">*/*</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.token</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>管理员token</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">token=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">7）查询订单数据</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">查询订单数据</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">查询订单数据</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">通过传入订单对象，查询相关的订单数据</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/order/queryData</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">get</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">*/*</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.BId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">2.DAmount</td>
+                        <td>number(double)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">3.DCount</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">4.DDate.date</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">5.DDate.day</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">6.DDate.hours</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">7.DDate.minutes</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">8.DDate.month</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">9.DDate.nanos</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">10.DDate.seconds</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">11.DDate.time</td>
+                        <td>integer(int64)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">12.DDate.timezoneOffset</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">13.DDate.year</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">14.DId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">15.DStatue</td>
+                        <td>boolean</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">16.GId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">17.SId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">18.token</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>token值</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">19.token</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>订单对象</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">BId=0&amp;DAmount=null&amp;DCount=0&amp;DDate.date=0&amp;DDate.day=0&amp;DDate.hours=0&amp;DDate.minutes=0&amp;DDate.month=0&amp;DDate.nanos=0&amp;DDate.seconds=0&amp;DDate.time=0&amp;DDate.timezoneOffset=0&amp;DDate.year=0&amp;DId=0&amp;DStatue=true&amp;GId=0&amp;SId=0&amp;token=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">8）更新支付状态</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">更新支付状态</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">更新支付状态</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">依据订单ID更新对应的支付状态</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/order/updatePay</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">post</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4">application/json</td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">*/*</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.dId</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>订单ID</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">2.token</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>token值</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>201</td>
+                    <td colspan="2">Created</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">dId=string&amp;token=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <div style="margin-bottom:20px;">
+        <!--这个是类的说明-->
+        <h4 class="first_title">评论管理操作的相关接口</h4>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">1）添加评论</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">添加评论</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">添加评论</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">参数为评论对象属性</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/comment/add</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">post</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4">application/json</td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">*/*</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.BId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">2.GId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">3.PContent</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">4.PDate.date</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">5.PDate.day</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">6.PDate.hours</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">7.PDate.minutes</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">8.PDate.month</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">9.PDate.nanos</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">10.PDate.seconds</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">11.PDate.time</td>
+                        <td>integer(int64)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">12.PDate.timezoneOffset</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">13.PDate.year</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">14.PGoodsOfLevel</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">15.PId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">16.PSellerOfLevel</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">17.comment</td>
+                        <td>object</td>
+                        <td>null</td>
+                        
+                        <td>N</td>
+                        <td>评论对象，对象的所有属性都需要传入</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">18.token</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>用户Token值</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>201</td>
+                    <td colspan="2">Created</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">BId=0&amp;GId=0&amp;PContent=string&amp;PDate.date=0&amp;PDate.day=0&amp;PDate.hours=0&amp;PDate.minutes=0&amp;PDate.month=0&amp;PDate.nanos=0&amp;PDate.seconds=0&amp;PDate.time=0&amp;PDate.timezoneOffset=0&amp;PDate.year=0&amp;PGoodsOfLevel=0&amp;PId=0&amp;PSellerOfLevel=0&amp;token=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">2）查询评论</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">查询评论</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">查询评论</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">查询所有评论</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/comment/all</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">get</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">*/*</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">3）查询评论</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">查询评论</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">查询评论</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">查询商品gId的所有评论</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/comment/all/{gId}</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">get</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">*/*</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.gId</td>
+                        <td>string</td>
+                        <td>path</td>
+                        
+                        <td>N</td>
+                        <td>依据商品ID查询对应的评论</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>404</td>
+                    <td colspan="2">Not Found</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+
+            <!--这个是每个请求的说明，方便生成文档后进行整理-->
+            <h5 class="second_title">4）删除评论</h5>
+
+            <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tr class="bg">
+                    <td colspan="5">删除评论</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口名称</td>
+                    <td colspan="4">删除评论</td>
+                </tr>
+                <tr>
+                    <td width="25%">接口描述</td>
+                    <td colspan="4">默认依据Id进行评论删除</td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td colspan="4">/comment/delete</td>
+                </tr>
+                <tr>
+                    <td>请求方式</td>
+                    <td colspan="4">delete</td>
+                </tr>
+                <tr>
+                    <td>请求类型</td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr>
+                    <td>返回类型</td>
+                    <td colspan="4">*/*</td>
+                </tr>
+
+                <tr class="bg">
+                    <td>参数名</td>
+                    <td width="15%">数据类型</td>
+                    <td width="15%">参数类型</td>
+                    <td width="15%">是否必填</td>
+                    <td width="29%">说明</td>
+                </tr>
+
+                
+                    <tr>
+                        <td align="left">1.BId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">2.GId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">3.PContent</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">4.PDate.date</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">5.PDate.day</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">6.PDate.hours</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">7.PDate.minutes</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">8.PDate.month</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">9.PDate.nanos</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">10.PDate.seconds</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">11.PDate.time</td>
+                        <td>integer(int64)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">12.PDate.timezoneOffset</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">13.PDate.year</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">14.PGoodsOfLevel</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">15.PId</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">16.PSellerOfLevel</td>
+                        <td>integer(int32)</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td></td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">17.comment</td>
+                        <td>object</td>
+                        <td>null</td>
+                        
+                        <td>N</td>
+                        <td>comment对象，pId参数必须有</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+                    <tr>
+                        <td align="left">18.token</td>
+                        <td>string</td>
+                        <td>query</td>
+                        
+                        <td>N</td>
+                        <td>用户Token值</td>
+                        <!--                        <td th:if="${request.modelAttr}" th:text="asdfagadfg"></td>-->
+                    </tr>
+                    
+
+
+                
+
+                <tr class="bg">
+                    <td>状态码</td>
+                    <td colspan="2">描述</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+                <tr>
+                    <td>200</td>
+                    <td colspan="2">OK</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>204</td>
+                    <td colspan="2">No Content</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>401</td>
+                    <td colspan="2">Unauthorized</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>403</td>
+                    <td colspan="2">Forbidden</td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg">
+                    <td>返回属性名</td>
+                    <td colspan="2">类型</td>
+                    <td colspan="2">说明</td>
+                </tr>
+
+<!--               对返回参数 递归生成行-->
+                <tbody>
+    
+</tbody>
+
+                <tr class="bg">
+                    <td colspan="5">示例</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">请求参数</td>
+                    <td colspan="4">BId=0&amp;GId=0&amp;PContent=string&amp;PDate.date=0&amp;PDate.day=0&amp;PDate.hours=0&amp;PDate.minutes=0&amp;PDate.month=0&amp;PDate.nanos=0&amp;PDate.seconds=0&amp;PDate.time=0&amp;PDate.timezoneOffset=0&amp;PDate.year=0&amp;PGoodsOfLevel=0&amp;PId=0&amp;PSellerOfLevel=0&amp;token=string</td>
+                </tr>
+                <tr class="specialHeight">
+                    <td class="bg">返回值</td>
+                    <td colspan="4"></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+    
+
+
+
+    
+
+</body>
+</html>

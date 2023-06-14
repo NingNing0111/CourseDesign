@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.ning.config.DruidConfigTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.711 s - in com.ning.config.DruidConfigTest
