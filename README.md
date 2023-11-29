@@ -1,4 +1,4 @@
-![image](https://github.com/NingNing0111/CourseDesign/assets/125198999/29c37579-64e4-445e-8954-8d67dd11c369)# CourseDesign
+# CourseDesign
 
 &emsp;&emsp;大二的软件工程课程设计+数据库大作业，校园二手交易平台，前后端分离项目，包含相关文档和PPT。
 
@@ -111,7 +111,6 @@ npm run serve
 
 ![](https://raw.githubusercontent.com/NingNing0111/picx-images-hosting/master/%E6%A0%A1%E5%9B%AD%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93%E7%B3%BB%E7%BB%9F/image.3uq3zq7ob9q0.webp)
 
-![](https://raw.githubusercontent.com/NingNing0111/picx-images-hosting/master/%E6%A0%A1%E5%9B%AD%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93%E7%B3%BB%E7%BB%9F/image.3uq3zq7ob9q0.webp)
 
 ![](https://raw.githubusercontent.com/NingNing0111/picx-images-hosting/master/%E6%A0%A1%E5%9B%AD%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93%E7%B3%BB%E7%BB%9F/image.5js4f8hkiks0.webp)
 
