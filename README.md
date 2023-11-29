@@ -1,4 +1,4 @@
-# CourseDesign
+![image](https://github.com/NingNing0111/CourseDesign/assets/125198999/29c37579-64e4-445e-8954-8d67dd11c369)# CourseDesign
 
 &emsp;&emsp;大二的软件工程课程设计+数据库大作业，校园二手交易平台，前后端分离项目，包含相关文档和PPT。
 
@@ -41,7 +41,7 @@ git clone https://github.com/NingNing0111/CourseDesign.git
 mysql -h host -u username -p password database_name < file.sql
 ```
 
-![](https://cdn.staticaly.com/gh/NingNing0111/picx-images-hosting@master/校园二手交易系统/image.4270kv0ge5a0.png)
+![](https://raw.githubusercontent.com/NingNing0111/picx-images-hosting/master/%E6%A0%A1%E5%9B%AD%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93%E7%B3%BB%E7%BB%9F/image.4270kv0ge5a0.png)
 
 
 #### 启动后端
@@ -56,11 +56,11 @@ java -jar software-project-0.0.1-SNAPSHOT.jar --server.port=端口号 --spring.d
 
 > jar包的启动参数具体请参照[application.yml](https://github.com/NingNing0111/CourseDesign/blob/main/software-project-back/src/main/resources/application.yml)文件
 
-![](https://cdn.staticaly.com/gh/NingNing0111/picx-images-hosting@master/校园二手交易系统/image.6qfkjfikqng0.webp)
+![](https://raw.githubusercontent.com/NingNing0111/picx-images-hosting/master/%E6%A0%A1%E5%9B%AD%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93%E7%B3%BB%E7%BB%9F/image.6qfkjfikqng0.webp)
 
 > 浏览器访问：localhost:端口号/goods/all，默认为[localhost:8888/goods/all](localhost:8888/goods/all)
 
-![](https://cdn.staticaly.com/gh/NingNing0111/picx-images-hosting@master/校园二手交易系统/image.29lse2od31q8.webp)
+![](https://raw.githubusercontent.com/NingNing0111/picx-images-hosting/master/%E6%A0%A1%E5%9B%AD%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93%E7%B3%BB%E7%BB%9F/image.29lse2od31q8.webp)
 
 > 若能正常拿到数据 则说明后端启动成功
 
@@ -95,28 +95,28 @@ npm run serve
 
 #### 首页
 
-![](https://cdn.staticaly.com/gh/NingNing0111/picx-images-hosting@master/校园二手交易系统/image.3n7moufemgk0.webp)
+![](https://raw.githubusercontent.com/NingNing0111/picx-images-hosting/master/%E6%A0%A1%E5%9B%AD%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93%E7%B3%BB%E7%BB%9F/image.3n7moufemgk0.webp)
 
-![](https://cdn.staticaly.com/gh/NingNing0111/picx-images-hosting@master/校园二手交易系统/image.6vc46zsy2ws0.webp)
+![](https://raw.githubusercontent.com/NingNing0111/picx-images-hosting/master/%E6%A0%A1%E5%9B%AD%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93%E7%B3%BB%E7%BB%9F/image.6vc46zsy2ws0.webp)
 
 #### 用户后台界面
 
-![](https://cdn.staticaly.com/gh/NingNing0111/picx-images-hosting@master/校园二手交易系统/image.57ntu7i2rrk0.webp)
+![](https://raw.githubusercontent.com/NingNing0111/picx-images-hosting/master/%E6%A0%A1%E5%9B%AD%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93%E7%B3%BB%E7%BB%9F/image.57ntu7i2rrk0.webp)
 
-![](https://cdn.staticaly.com/gh/NingNing0111/picx-images-hosting@master/校园二手交易系统/image.2nt41fc4f5y0.webp)
+![](https://raw.githubusercontent.com/NingNing0111/picx-images-hosting/master/%E6%A0%A1%E5%9B%AD%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93%E7%B3%BB%E7%BB%9F/image.2nt41fc4f5y0.webp)
 
-![](https://cdn.staticaly.com/gh/NingNing0111/picx-images-hosting@master/校园二手交易系统/image.50v58z3mrqc0.webp)
+![](https://raw.githubusercontent.com/NingNing0111/picx-images-hosting/master/%E6%A0%A1%E5%9B%AD%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93%E7%B3%BB%E7%BB%9F/image.50v58z3mrqc0.webp)
 
 #### 管理员
 
-![](https://cdn.staticaly.com/gh/NingNing0111/picx-images-hosting@master/校园二手交易系统/image.3uq3zq7ob9q0.webp)
+![](https://raw.githubusercontent.com/NingNing0111/picx-images-hosting/master/%E6%A0%A1%E5%9B%AD%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93%E7%B3%BB%E7%BB%9F/image.3uq3zq7ob9q0.webp)
 
-![](https://cdn.staticaly.com/gh/NingNing0111/picx-images-hosting@master/校园二手交易系统/image.3uq3zq7ob9q0.webp)
+![](https://raw.githubusercontent.com/NingNing0111/picx-images-hosting/master/%E6%A0%A1%E5%9B%AD%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93%E7%B3%BB%E7%BB%9F/image.3uq3zq7ob9q0.webp)
 
-![](https://cdn.staticaly.com/gh/NingNing0111/picx-images-hosting@master/校园二手交易系统/image.5js4f8hkiks0.webp)
+![](https://raw.githubusercontent.com/NingNing0111/picx-images-hosting/master/%E6%A0%A1%E5%9B%AD%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93%E7%B3%BB%E7%BB%9F/image.5js4f8hkiks0.webp)
 
 
-![](https://cdn.staticaly.com/gh/NingNing0111/picx-images-hosting@master/校园二手交易系统/image.24km4vdb9lds.webp)
+![](https://raw.githubusercontent.com/NingNing0111/picx-images-hosting/master/%E6%A0%A1%E5%9B%AD%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93%E7%B3%BB%E7%BB%9F/image.24km4vdb9lds.webp)
 
 ### 其它信息
 
